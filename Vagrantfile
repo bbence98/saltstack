@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "salt_minion" do |salt_minion|
     salt_minion.vm.box = "ubuntu/bionic64"
     salt_minion.vm.network "private_network", ip: "192.168.10.195"
-    salt_minion.vm.provision "shell", path: "agent-provision.sh"
+    salt_minion.vm.provision "shell", path: "minion-provision.sh"
     salt_minion.vm.hostname = "minion01"
   end
 
